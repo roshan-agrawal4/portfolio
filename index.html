@@ -1,1 +1,565 @@
-HELLO world
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roshan Agrawal · Software Development Engineer</title>
+
+<meta name="description" content="Roshan Agrawal, Software Development Engineer II at Tata Communications. Backend and platform engineering with Java, Spring Boot, Kubernetes and event-driven architectures." />
+<meta name="author" content="Roshan Agrawal" />
+<link rel="canonical" href="https://roshan-agrawal4.github.io/portfolio/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Roshan Agrawal, Software Development Engineer" />
+<meta property="og:description" content="Backend and platform engineer building event-driven microservices and multi-cluster Kubernetes infrastructure." />
+<meta property="og:url" content="https://roshan-agrawal4.github.io/portfolio/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+<!-- Reading progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Ambient background -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-orb orb-1" aria-hidden="true"></div>
+<div class="bg-orb orb-2" aria-hidden="true"></div>
+<div class="bg-orb orb-3" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================= NAVBAR ============================= -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home" aria-label="Home">
+      <span class="brand-mark">RA</span>
+      <span class="brand-text">Roshan&nbsp;Agrawal</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#awards">Awards</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Toggle theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g class="rays"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></g></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm" href="assets/Roshan_Agrawal_Resume.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        Résumé
+      </a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================= HERO ============================= -->
+<section class="hero section" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">
+        <span class="pulse-dot"></span>
+        Bengaluru, India &nbsp;·&nbsp; SDE&nbsp;II at Tata Communications
+      </p>
+
+      <h1 class="hero-title reveal" data-delay="1">
+        Hi, I'm <span class="grad">Roshan</span>.<br />
+        I build backends that<br class="br-md" />
+        <span class="rotator" id="rotator" aria-live="polite"><span class="rotator-text">scale</span></span>
+      </h1>
+
+      <p class="hero-lead reveal" data-delay="2">
+        I work on backend and platform systems at Tata Communications: an event-driven audit
+        logger, a managed vector database platform, and the Kubernetes infrastructure under both.
+        Most of my time goes into throughput, ordering guarantees, and catching failures before
+        anyone else notices them.
+      </p>
+
+      <div class="hero-cta reveal" data-delay="3">
+        <a class="btn btn-primary" href="#experience">
+          See what I've built
+          <svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="assets/Roshan_Agrawal_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+      </div>
+
+      <ul class="socials reveal" data-delay="4">
+        <li><a href="https://github.com/roshan-agrawal4" target="_blank" rel="noopener" aria-label="GitHub" data-tip="GitHub">
+          <svg viewBox="0 0 24 24" class="i-fill" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a></li>
+        <li><a href="https://linkedin.com/in/roshan-agrawal" target="_blank" rel="noopener" aria-label="LinkedIn" data-tip="LinkedIn">
+          <svg viewBox="0 0 24 24" class="i-fill" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a></li>
+        <li><a href="mailto:roshan.bitspilani@gmail.com" aria-label="Email" data-tip="Email">
+          <svg viewBox="0 0 24 24" class="i" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></a></li>
+      </ul>
+    </div>
+
+    <!-- Decorative code card -->
+    <div class="hero-visual reveal" data-delay="3">
+      <div class="code-card tilt">
+        <div class="code-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="code-file">RoshanAgrawal.java</span>
+        </div>
+<pre class="code-body"><code><span class="c-key">public class</span> <span class="c-cls">RoshanAgrawal</span> <span class="c-pun">{</span>
+
+  <span class="c-key">private final</span> <span class="c-cls">String</span> role <span class="c-pun">=</span>
+      <span class="c-str">"SDE II @ Tata Communications"</span><span class="c-pun">;</span>
+
+  <span class="c-key">private final</span> <span class="c-cls">List</span><span class="c-pun">&lt;</span><span class="c-cls">String</span><span class="c-pun">&gt;</span> focus <span class="c-pun">=</span> <span class="c-cls">List</span><span class="c-pun">.</span><span class="c-fn">of</span><span class="c-pun">(</span>
+      <span class="c-str">"distributed systems"</span><span class="c-pun">,</span>
+      <span class="c-str">"event-driven backends"</span><span class="c-pun">,</span>
+      <span class="c-str">"kubernetes platforms"</span><span class="c-pun">);</span>
+
+  <span class="c-ann">@Scheduled</span><span class="c-pun">(</span>fixedRate <span class="c-pun">=</span> <span class="c-num">10_000</span><span class="c-pun">)</span>
+  <span class="c-key">public void</span> <span class="c-fn">ship</span><span class="c-pun">()</span> <span class="c-pun">{</span>
+    queue<span class="c-pun">.</span><span class="c-fn">drainTo</span><span class="c-pun">(</span>production<span class="c-pun">);</span> <span class="c-cmt">// in order, always</span>
+  <span class="c-pun">}</span>
+<span class="c-pun">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impact numbers -->
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat"><span class="stat-num" data-count="100" data-suffix="+">0</span><span class="stat-label">Kubernetes clusters served</span></div>
+      <div class="stat"><span class="stat-num" data-count="5" data-suffix="x">0</span><span class="stat-label">Ingestion throughput gain</span></div>
+      <div class="stat"><span class="stat-num" data-prefix="$" data-count="2" data-suffix="M">0</span><span class="stat-label">Platform revenue contributed</span></div>
+      <div class="stat"><span class="stat-num" data-count="3" data-suffix="x">0</span><span class="stat-label">Faster incident detection</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= MARQUEE ============================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ============================= ABOUT ============================= -->
+<section class="section" id="about">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-kicker">01 / About</span>
+      <h2 class="section-title">Electrical engineering degree, distributed systems job</h2>
+    </header>
+
+    <div class="about-grid">
+      <figure class="photo-frame reveal">
+        <img src="assets/photo.jpg" alt="Roshan Agrawal"
+             onerror="this.onerror=null;this.src='assets/photo-placeholder.svg';this.classList.add('is-placeholder')" />
+      </figure>
+
+      <div class="about-copy reveal" data-delay="1">
+        <p>
+          I studied Electrical and Electronics Engineering at BITS Pilani and ended up writing
+          backend code full time. Since July 2024 I've been an SDE II at Tata Communications,
+          working across an audit logging microservice, a managed vector database platform, and
+          the big data stack sitting under both.
+        </p>
+        <p>
+          The problems I enjoy are the ones where correctness and throughput pull against each
+          other. Ordering lifecycle events streaming in from 100+ clusters without losing any.
+          Getting 5x more out of a RabbitMQ consumer without breaking sequence. Knowing an alert
+          fired before a customer had to tell us.
+        </p>
+        <p>
+          Before this I spent a year at Uber on the CRM data side, auditing warehouse tables and
+          shipping pipelines. That year taught me something I still use: a dataset nobody trusts
+          is more expensive than no dataset at all.
+        </p>
+
+        <div class="about-chips">
+          <span class="chip">Distributed systems</span>
+          <span class="chip">Event-driven architecture</span>
+          <span class="chip">Multithreading</span>
+          <span class="chip">Kubernetes &amp; DevOps</span>
+          <span class="chip">System design</span>
+          <span class="chip">Observability</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="facts-strip reveal">
+      <div class="fact"><span class="fact-k">Now</span><span class="fact-v">SDE II, Tata Communications</span></div>
+      <div class="fact"><span class="fact-k">Based in</span><span class="fact-v">Bengaluru, India</span></div>
+      <div class="fact"><span class="fact-k">Studied</span><span class="fact-v">B.E. EEE, BITS Pilani '24</span></div>
+      <div class="fact"><span class="fact-k">Daily driver</span><span class="fact-v">Java · Spring Boot · K8s</span></div>
+      <div class="fact"><span class="fact-k">Open to</span><span class="fact-v">Backend &amp; platform roles</span></div>
+      <div class="fact"><span class="fact-k">Reach me</span><span class="fact-v"><a href="mailto:roshan.bitspilani@gmail.com">roshan.bitspilani@gmail.com</a></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TECH STACK ============================= -->
+<section class="section" id="stack">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-kicker">02 / Toolkit</span>
+      <h2 class="section-title">Things I build with</h2>
+    </header>
+
+    <div class="stack-tabs reveal" role="tablist" aria-label="Tech categories">
+      <button class="tab is-active" role="tab" data-filter="all" aria-selected="true">All</button>
+      <button class="tab" role="tab" data-filter="lang" aria-selected="false">Languages</button>
+      <button class="tab" role="tab" data-filter="backend" aria-selected="false">Backend</button>
+      <button class="tab" role="tab" data-filter="data" aria-selected="false">Data &amp; Messaging</button>
+      <button class="tab" role="tab" data-filter="infra" aria-selected="false">Infra &amp; DevOps</button>
+      <button class="tab" role="tab" data-filter="tools" aria-selected="false">Tools</button>
+    </div>
+
+    <!-- Icons are rendered by js/stack.js. Edit the list there to add or remove tech. -->
+    <div class="stack-grid reveal" id="stackGrid"></div>
+  </div>
+</section>
+
+<!-- ============================= EXPERIENCE ============================= -->
+<section class="section" id="experience">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-kicker">03 / Experience</span>
+      <h2 class="section-title">Where I've worked</h2>
+    </header>
+
+    <div class="timeline">
+
+      <!-- ---------- Tata Communications ---------- -->
+      <article class="tl-item reveal">
+        <div class="tl-marker"><span></span></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div class="logo-plate" title="Tata Communications">
+              <img src="assets/logos/tata-communications-white.svg" alt="Tata Communications" class="logo-wide invert-on-light" loading="lazy" />
+            </div>
+            <span class="tl-date">Jul 2024 to Present</span>
+          </div>
+          <h3 class="tl-role">Software Development Engineer II</h3>
+          <p class="tl-meta">Tata Communications · Bengaluru, India · Full-time</p>
+
+          <div class="tl-block">
+            <h4 class="tl-sub"><span class="tl-sub-idx">A</span> Multi-threaded Audit Logger</h4>
+            <ul class="bullets">
+              <li>Architected a centralized audit logging microservice in <strong>Java / Spring Boot</strong> on an event-driven architecture, ingesting, ordering and persisting customer lifecycle events across <strong>100+ Kubernetes clusters</strong> spanning multiple datacenters.</li>
+              <li>Scaled concurrent <strong>RabbitMQ</strong> consumer ingestion with a multi-threaded design built on <code>BlockingQueue</code> and <code>ConcurrentHashMap</code>, lifting throughput <strong>5x</strong>.</li>
+              <li>Enforced sequential consistency under real distributed conditions using background thread scheduling against a <strong>10s SLA</strong>, compensating for network latency, with <strong>Postgres</strong> as the system of record.</li>
+            </ul>
+          </div>
+
+          <div class="tl-block">
+            <h4 class="tl-sub"><span class="tl-sub-idx">B</span> AI Studio &amp; Data Platform</h4>
+            <ul class="bullets">
+              <li>Built the backend provisioning layer for <strong>Milvus</strong> and <strong>Qdrant</strong> vector databases on Kubernetes in a 3-tier architecture for enterprise RAG workloads, exposing REST APIs across a multi-cluster setup. The platform contributes <strong>$2M</strong> in revenue.</li>
+              <li>Benchmarked and tuned <strong>ClickHouse</strong> against AWS Redshift from 1GB to 50TB, beating it by <strong>60% on ingestion</strong> and <strong>10x on query time</strong>, which won JLR as a customer.</li>
+              <li>Built end-to-end observability for the vector DB platform: Prometheus metrics, Alertmanager rules, stress-tested alerts and Grafana dashboards, cutting <strong>MTTD from 30 to 10 minutes</strong>.</li>
+              <li>Containerized and shipped microservices with Docker, Helm and custom Kubernetes resources across multi-cluster cloud setups.</li>
+              <li>Wrote JUnit tests, set up GitHub Actions CI/CD, led Playwright UI testing for the Angular frontend, documented features and handled customer issues on-call.</li>
+            </ul>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">RabbitMQ</span>
+            <span class="tag">Kubernetes</span><span class="tag">Postgres</span><span class="tag">Milvus</span>
+            <span class="tag">Qdrant</span><span class="tag">ClickHouse</span><span class="tag">Prometheus</span>
+            <span class="tag">Grafana</span><span class="tag">Helm</span><span class="tag">Docker</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- Uber ---------- -->
+      <article class="tl-item reveal">
+        <div class="tl-marker"><span></span></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div class="logo-plate" title="Uber">
+              <img src="assets/logos/uber-white.svg" alt="Uber" class="logo-mid invert-on-light" loading="lazy" />
+            </div>
+            <span class="tl-date">Jul 2023 to Jun 2024</span>
+          </div>
+          <h3 class="tl-role">Intern</h3>
+          <p class="tl-meta">Uber · Hyderabad, India · Internship</p>
+
+          <ul class="bullets">
+            <li>Audited <strong>40+ CRM metrics</strong> across BigQuery agent ticket tables, modelled the ER diagram, validated upstream and downstream coherency, and consolidated a production <strong>SSOT table</strong> that lifted team efficiency by 13%.</li>
+            <li>Built a BI data pipeline in <strong>Python and SQL</strong> with cron scheduling and YAML-validated config, deployed to production, saving <strong>1,200 man-hours</strong> and <strong>$12K</strong>.</li>
+            <li>Shipped a CSAT dashboard in <strong>Tableau</strong>, automated weekly SQL to GSheets workflows, and ran production deep-dives whose findings reached the director level and informed <strong>$15M/month</strong> in decisions.</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">BigQuery</span>
+            <span class="tag">Tableau</span><span class="tag">Data pipelines</span><span class="tag">YAML</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PROJECTS ============================= -->
+<section class="section" id="projects">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-kicker">04 / Projects</span>
+      <h2 class="section-title">Things I made outside the job description</h2>
+    </header>
+
+    <div class="projects">
+
+      <!-- To add another project, copy a whole <article class="project"> block and edit the text. -->
+
+      <!-- ---------- Carbon Capture ---------- -->
+      <article class="project featured reveal">
+        <div class="project-glow" aria-hidden="true"></div>
+        <div class="project-top">
+          <span class="project-badge">Startup · Research</span>
+          <span class="project-year">2021</span>
+        </div>
+        <h3 class="project-title">Carbon Capture via Engineered Microbial Ecosystems</h3>
+        <p class="project-desc">
+          A microbial ecosystem engineered to pull carbon out of the air for a fraction of what the
+          existing methods cost. It reached <strong>95% capture accuracy</strong> at an
+          <strong>80% lower cost</strong> than the baseline, which was enough to take it out of the
+          lab and turn it into a startup pitch.
+        </p>
+        <div class="tags">
+          <span class="tag">Genetic Engineering</span><span class="tag">Microbial Ecosystems</span>
+          <span class="tag">Biotechnology</span><span class="tag">Research</span>
+        </div>
+      </article>
+
+      <!-- ---------- Breathalyzer ---------- -->
+      <article class="project reveal" data-delay="1">
+        <div class="project-top">
+          <span class="project-badge">Research</span>
+          <span class="project-year">2022</span>
+        </div>
+        <h3 class="project-title">Breathalyzer for Early Disease Detection</h3>
+        <p class="project-desc">
+          Built the application layer for a breathalyzer that reads <strong>13 volatile organic
+          compounds</strong> from a single breath and matches the pattern against fingerprints for
+          <strong>17 diseases</strong>, at <strong>86% accuracy.</strong>
+          Research under Prof. Satyendra Kumar Mourya at BITS Pilani.
+        </p>
+        <div class="tags">
+          <span class="tag">Application Development</span><span class="tag">VOC Sensing</span>
+          <span class="tag">Diagnostics</span><span class="tag">Research</span>
+        </div>
+        <div class="project-links">
+          <a class="link-btn" href="https://www.bits-pilani.ac.in/pilani/satyendra-kumar-mourya" target="_blank" rel="noopener">Supervisor <svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- ---------- Drone Monitoring ---------- -->
+      <article class="project reveal" data-delay="2">
+        <div class="project-top">
+          <span class="project-badge alt">IoT · Full-stack</span>
+          <span class="project-year">2022</span>
+        </div>
+        <h3 class="project-title">Drone Monitoring System</h3>
+        <p class="project-desc">
+          A drone that reports where it is and what its sensors see. GPS and sensor readings go from
+          a <strong>NodeMCU</strong> to a <strong>Raspberry Pi</strong> over MQTT, a Python service
+          on the Pi writes them to Firebase, and a Django site renders the live feed.
+        </p>
+        <div class="tags">
+          <span class="tag">NodeMCU</span><span class="tag">Raspberry Pi</span><span class="tag">MQTT</span>
+          <span class="tag">Python</span><span class="tag">Firebase</span><span class="tag">Django</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= AWARDS & LEADERSHIP ============================= -->
+<section class="section" id="awards">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-kicker">05 / Recognition</span>
+      <h2 class="section-title">Awards &amp; leadership</h2>
+    </header>
+
+    <h3 class="group-label reveal">Awards</h3>
+    <div class="awards">
+
+      <article class="award reveal">
+        <span class="award-icon"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg></span>
+        <div class="award-body">
+          <div class="award-head">
+            <h4 class="award-title"><a href="https://www.online-inspire.gov.in/" target="_blank" rel="noopener">INSPIRE Scholar</a></h4>
+            <span class="award-year">2019</span>
+          </div>
+          <p class="award-desc">Government of India scholarship awarded for finishing in the top 1 percentile of Class 12.</p>
+        </div>
+      </article>
+
+      <article class="award reveal" data-delay="1">
+        <span class="award-icon"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M8 21h8M12 17v4M6 4h12v4a6 6 0 0 1-12 0V4zM6 6H3.5v1A3.5 3.5 0 0 0 6 10.4M18 6h2.5v1A3.5 3.5 0 0 1 18 10.4"/></svg></span>
+        <div class="award-body">
+          <div class="award-head">
+            <h4 class="award-title">Avery Dennison Innovation Award</h4>
+            <span class="award-year">2021</span>
+          </div>
+          <p class="award-desc">Won for the microbial carbon capture research.</p>
+        </div>
+      </article>
+
+      <article class="award reveal" data-delay="2">
+        <span class="award-icon"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M8 21h8M12 17v4M6 4h12v4a6 6 0 0 1-12 0V4zM6 6H3.5v1A3.5 3.5 0 0 0 6 10.4M18 6h2.5v1A3.5 3.5 0 0 1 18 10.4"/></svg></span>
+        <div class="award-body">
+          <div class="award-head">
+            <h4 class="award-title"><a href="https://www.dwih-newdelhi.org/en/event/falling-walls-lab-india-2021/" target="_blank" rel="noopener">Falling Walls Lab India</a></h4>
+            <span class="award-year">2021</span>
+          </div>
+          <p class="award-desc">Winner at the India round of the global science pitch competition run by DWIH New Delhi.</p>
+        </div>
+      </article>
+
+      <article class="award reveal" data-delay="3">
+        <span class="award-icon"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg></span>
+        <div class="award-body">
+          <div class="award-head">
+            <h4 class="award-title">Antler India</h4>
+            <span class="award-year">2022</span>
+          </div>
+          <p class="award-desc">Shortlisted by the early-stage VC for its founder residency on the strength of the carbon capture pitch.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <h3 class="group-label reveal">Positions of responsibility</h3>
+    <div class="roles">
+
+      <article class="role reveal">
+        <div class="role-head">
+          <div>
+            <h4 class="role-title">Vice-Chairperson</h4>
+            <p class="role-org">IEEE, BITS Pilani</p>
+          </div>
+          <span class="tl-date">Sep 2019 to Jun 2022</span>
+        </div>
+        <ul class="bullets">
+          <li>Led a 30 person team through 3 technical talks and 10 project-based upskilling workshops, and raised over <strong>₹1 lakh</strong> in funding.</li>
+          <li>Ran events and publicity for <strong>APOGEE</strong>, BITS Pilani's technical festival: 1200+ registrations, 0.3M impressions and sponsors including Pepsi.</li>
+        </ul>
+      </article>
+
+      <article class="role reveal" data-delay="1">
+        <div class="role-head">
+          <div>
+            <h4 class="role-title">Consultant</h4>
+            <p class="role-org">ShARE, BITS Pilani</p>
+          </div>
+          <span class="tl-date">Sep 2020 to Jun 2022</span>
+        </div>
+        <ul class="bullets">
+          <li>Selected in the <strong>top 5% of applicants</strong> for ShARE's flagship leadership programme and its "Do Well Do Good" brief.</li>
+          <li>Worked through case studies across industries, which is where most of my breadth outside engineering came from.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= EDUCATION ============================= -->
+<section class="section" id="education">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-kicker">06 / Education</span>
+      <h2 class="section-title">Where it started</h2>
+    </header>
+
+    <div class="edu-card reveal">
+      <div class="edu-logo">
+        <img src="assets/logos/bits-pilani.png" alt="BITS Pilani" loading="lazy" />
+      </div>
+      <div class="edu-body">
+        <div class="edu-head">
+          <h3 class="edu-school">Birla Institute of Technology and Science, Pilani</h3>
+          <span class="tl-date">2019 to 2024</span>
+        </div>
+        <p class="edu-degree">Bachelor of Engineering, Electrical &amp; Electronics Engineering</p>
+        <p class="edu-meta">Pilani Campus, Rajasthan, India</p>
+        <p class="edu-note">
+          The real curriculum at BITS was the people. Everyone there was sharper than me at
+          something, and I spent as much time on clubs, research and startup ideas as on coursework.
+          The alumni track record speaks for the place: BITSians have founded 17 unicorns, including
+          SanDisk, Swiggy, Postman and Groww, worth over $57 billion combined.
+        </p>
+        <div class="tags">
+          <span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Operating Systems</span>
+          <span class="tag">DBMS</span><span class="tag">Computer Networks</span>
+          <span class="tag">OOP</span><span class="tag">System Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section class="section section-contact" id="contact">
+  <div class="container">
+    <div class="contact-card reveal">
+      <span class="section-kicker">07 / Contact</span>
+      <h2 class="contact-title">Let's talk.</h2>
+      <p class="contact-sub">
+        I'm open to backend and platform engineering roles, and always up for a conversation about
+        distributed systems. Email is the fastest way to reach me.
+      </p>
+
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:roshan.bitspilani@gmail.com">
+          <span class="cl-icon"><svg viewBox="0 0 24 24" class="i" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></span>
+          <span class="cl-text"><span class="cl-k">Email</span><span class="cl-v">roshan.bitspilani@gmail.com</span></span>
+        </a>
+        <a class="contact-link" href="https://linkedin.com/in/roshan-agrawal" target="_blank" rel="noopener">
+          <span class="cl-icon"><svg viewBox="0 0 24 24" class="i-fill" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></span>
+          <span class="cl-text"><span class="cl-k">LinkedIn</span><span class="cl-v">/in/roshan-agrawal</span></span>
+        </a>
+        <a class="contact-link" href="https://github.com/roshan-agrawal4" target="_blank" rel="noopener">
+          <span class="cl-icon"><svg viewBox="0 0 24 24" class="i-fill" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></span>
+          <span class="cl-text"><span class="cl-k">GitHub</span><span class="cl-v">@roshan-agrawal4</span></span>
+        </a>
+      </div>
+
+      <a class="btn btn-primary btn-lg" href="mailto:roshan.bitspilani@gmail.com">
+        Say hello
+        <svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> Roshan Agrawal. Built with plain HTML, CSS and a bit of JavaScript.</p>
+    <a href="#home" class="to-top">Back to top <svg viewBox="0 0 24 24" class="i" aria-hidden="true"><path d="M12 19V5m0 0l-6 6m6-6l6 6"/></svg></a>
+  </div>
+</footer>
+
+<script src="js/stack.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
